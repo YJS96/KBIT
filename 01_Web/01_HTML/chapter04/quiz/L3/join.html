@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        font-weight: bold;
+      }
+
+      .login-frame {
+        position: relative;
+        margin: 24px;
+        width: 420px;
+        padding: 16px 12px 12px 12px;
+        border: 1px solid black;
+      }
+
+      .login-text {
+        position: absolute;
+        top: -12px;
+        width: auto;
+        background-color: white;
+        padding: 0px 2px;
+        margin-left: -2px;
+      }
+
+      label {
+        display: inline-block;
+        width: 112px;
+        text-align: center;
+      }
+
+      .label-gender {
+        width: auto;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-frame">
+      <div class="login-text">회원가입</div>
+      <form>
+        <div>
+          <label for="username">사용자 ID</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div>
+          <label for="password">비밀번호</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <label for="password-confirm">비밀번호 확인</label>
+          <input type="password" name="password-confirm" id="password-confirm" />
+        </div>
+        <div>
+          <label for="username">이름</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div>
+          <label for="gender">성별</label>
+          <input type="radio" name="gender" id="m" />
+          <label class="label-gender" for="m">남</label>
+          <input type="radio" name="gender" id="f" />
+          <label class="label-gender" for="f">여</label>
+        </div>
+        <div>
+          <label>취미</label>
+          <input type="checkbox" name="football" id="football" />
+          <label class="label-gender" for="football">축구</label>
+          <input type="checkbox" name="baseball" id="baseball" />
+          <label class="label-gender" for="baseball">야구</label>
+          <input type="checkbox" name="volleyball" id="volleyball" />
+          <label class="label-gender" for="volleyball">배구</label>
+          <input type="checkbox" name="basketball" id="basketball" />
+          <label class="label-gender" for="basketball">농구</label>
+        </div>
+        <div>
+          <label for="email">email</label>
+          <input type="email" name="eamil" id="email" />
+        </div>
+        <div>
+          <label for="job">역할</label>
+          <select name="job" id="job">
+            <option value="ADMIN">ADMIN</option>
+            <option value="administrator">관리자</option>
+            <option value="user">일반회원</option>
+          </select>
+        </div>
+        <div style="margin-top: 4px">
+          <input type="submit" value="확인" />
+          <button>다시쓰기</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

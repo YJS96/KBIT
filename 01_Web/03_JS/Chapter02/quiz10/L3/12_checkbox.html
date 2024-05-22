@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      좋아하는 음식은?
+      <label><input type="checkbox" name="food" value="라면" id="라면" />라면</label>
+      <label><input type="checkbox" name="food" value="만두" id="만두" />만두</label>
+      <label><input type="checkbox" name="food" value="불고기" id="불고기" />불고기</label>
+      <input type="button" id="btn" value="전송" />
+    </div>
+    <script>
+      // let ramenResult = '';
+      // let dumpReuslt = '';
+      // let bulResult = '';
+      // const ramenCheck = document.getElementById('라면');
+      // const dumpCheck = document.getElementById('만두');
+      // const bulCheck = document.getElementById('불고기');
+      // const btnEl = document.getElementById('btn');
+
+      // ramenCheck.onchange = () => {
+      //   if (ramenCheck.checked) {
+      //     ramenResult = '라면';
+      //   } else {
+      //     ramenResult = '';
+      //   }
+      // };
+
+      // dumpCheck.onchange = () => {
+      //   if (dumpCheck.checked) {
+      //     dumpResult = '만두';
+      //   } else {
+      //     dumpResult = '';
+      //   }
+      // };
+
+      // bulCheck.onchange = () => {
+      //   if (bulCheck.checked) {
+      //     bulResult = '불고기';
+      //   } else {
+      //     bulResult = '';
+      //   }
+      // };
+
+      // btnEl.onclick = () => {
+      //   console.log(ramenResult + dumpReuslt + bulResult);
+      // };
+
+      const btnEl = document.getElementById('btn');
+
+      btnEl.addEventListener('click', function () {
+        let result = [];
+        let foods = document.getElementsByName('food');
+        for (let i = 0, len = foods.length; i < len; i++) {
+          let food = foods.item(i);
+          if (food.checked) {
+            result.push(food.value);
+          }
+        }
+        console.log(result);
+      });
+    </script>
+  </body>
+</html>

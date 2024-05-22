@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="image" />
+    <script>
+      const imgEl = document.getElementById('image');
+      const imgWidth = 300;
+      const imgHeight = 200;
+
+      imgEl.src = `http://via.placeholder.com/${imgWidth}x${imgHeight}`;
+      imgEl.width = imgWidth;
+      imgEl.height = imgHeight;
+    </script>
+  </body>
+</html>

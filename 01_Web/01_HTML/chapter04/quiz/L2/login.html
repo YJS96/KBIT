@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        font-weight: bold;
+      }
+
+      .login-frame {
+        position: relative;
+        margin: 24px;
+        width: 400px;
+        padding: 16px 12px 12px 12px;
+        border: 1px solid black;
+      }
+
+      .login-text {
+        position: absolute;
+        top: -12px;
+        width: auto;
+        background-color: white;
+        padding: 0px 2px;
+        margin-left: -2px;
+      }
+
+      label {
+        display: inline-block;
+        width: 76px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-frame">
+      <div class="login-text">로그인</div>
+      <form>
+        <div>
+          <label for="username">사용자 ID</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div>
+          <label for="password">비밀번호</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div style="margin-top: 4px;">
+          <input type="submit" value="확인" />
+          <button>다시쓰기</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

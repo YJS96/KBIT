@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let output = '';
+      for (let i = 0; i <= 255; i++) {
+        output += '<div></div>';
+      }
+      document.body.innerHTML = output;
+
+      let divEls = document.querySelectorAll('div');
+      for (let i = 0; i < divEls.length; i++) {
+        let divEl = divEls[i];
+
+        divEl.style.height = '2px';
+        divEl.style.background = `rgb(${i}, ${i}, ${i})`;
+      }
+    </script>
+  </body>
+</html>

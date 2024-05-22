@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // document.querySelector('h1').style.backgroundColor = 'red';
+
+      // window.onload = function () {
+      //   document.querySelector('h1').style.backgroundColor = 'red';
+      // };
+
+      window.onload = function () {
+        // let output = '';
+        // for (let i = 0; i < 256; i++) {
+        //   output += '<div></div>';
+        // }
+        // document.body.innerHTML = output;
+        // let divs = document.querySelectorAll('div');
+        // for (let i = 0; i < divs.length; i++) {
+        //   let div = divs[i];
+        //   div.style.height = '2px';
+        //   div.style.background = `rgb(${i}, ${i}, ${i})`;
+        // }
+
+        // let image = document.getElementById('image');
+
+        // image.src = 'http://via.placeholder.com/300x200';
+        // image.width = 300;
+        // image.height = 200;
+
+        // let clock = document.getElementById('clock');
+        // setInterval(function () {
+        //   let now = new Date();
+        //   clock.innerHTML = now.toString();
+        // }, 1000);
+
+        let button = document.getElementById('button');
+
+        button.onclick = function () {
+          return false;
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <!-- <img id="image" /> -->
+    <div id="clock"></div>
+    <a href="http://hanbit.co.kr" id="button">버튼</a>
+  </body>
+</html>

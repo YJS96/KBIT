@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 01_output_alert
+      console.log('Hello JavaScript .. !');
+
+      // 02_variable_use
+      const pi = 3.141592;
+      let radius = 10;
+
+      console.log(pi * radius ** 2);
+
+      // 03_condition_else
+      const date = new Date();
+      let hours = date.getHours();
+
+      function getTime() {
+        let isAfternoon = '오후';
+        if (hours < 12) {
+          isAfternoon = '오전';
+        }
+        console.log(isAfternoon + '입니다.');
+      }
+      getTime();
+
+      // 04_note_logic
+      let month = date.getMonth() + 1;
+      let season = '겨울';
+      if (3 <= month < 6) {
+        season = '봄';
+      } else if (6 <= month < 9) {
+        season = '여름';
+      } else if (10 <= month < 12) {
+        season = '가을';
+      }
+      console.log(season + '입니다.');
+
+      // 05_arry_index
+      const array = [10, 20, 30, 40, 50];
+      console.log(array.length);
+
+      for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+
+      // 06_loop_while
+      let i = 0;
+      while (i < array.length) {
+        console.log(array[i]);
+        i += 1;
+      }
+
+      // 07_loop_forSum
+      let loopSum = 0;
+      for (let i = 0; i <= 100; i++) {
+        loopSum += i;
+      }
+      console.log(loopSum);
+
+      // 08_function_return
+      function squareNum(num) {
+        return num * num;
+      }
+      console.log(squareNum(3));
+
+      // 09_function_callback
+      function callTenTimes(callback) {
+        for (let i = 0; i < 10; i++) {
+          callback();
+        }
+      }
+
+      let fun = function () {
+        console.log('함수 호출');
+      };
+
+      callTenTimes(fun);
+
+      // 09_function_nonameCallback
+      function callTenTimesNoname(callback) {
+        for (let i = 0; i < 10; i++) {
+          callback();
+        }
+      }
+
+      callTenTimesNoname(function () {
+        console.log('함수 호출');
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">이름 : </label>
+      <input type="text" name="name" id="name" size="30" />
+      <input type="button" value="전송" id="btn" />
+    </form>
+    <script>
+      let userName = '';
+      const nameInput = document.getElementById('name');
+      const btnEl = document.getElementById('btn');
+
+      nameInput.onchange = () => {
+        userName = nameInput.value;
+      };
+
+      nameInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          console.log(userName);
+        }
+      });
+
+      btnEl.onclick = () => {
+        console.log(userName);
+      };
+
+      btnEl.key;
+    </script>
+  </body>
+</html>
