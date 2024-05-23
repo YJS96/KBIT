@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <img :src="imgSrc" alt="" width="400px" />
+      <button @click="changeImgSrc()">이미지 변경</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            imgSrc:
+              'https://www.princeton.edu/sites/default/files/styles/1x_full_2x_half_crop/public/images/2022/02/KOA_Nassau_2697x1517.jpg?itok=Bg2K7j7J',
+          };
+        },
+        methods: {
+          changeImgSrc() {
+            this.imgSrc = 'https://pbs.twimg.com/media/FDrbcNMaQAELMWe.jpg';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

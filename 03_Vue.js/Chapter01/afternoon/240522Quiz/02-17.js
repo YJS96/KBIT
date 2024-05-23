@@ -2,7 +2,7 @@ let p1 = {
   name: '아이패드',
   price: 200000,
   quantity: 2,
-  order: () => {
+  order: function () {
     if (!this.amount) {
       this.amount = this.quantity * this.price;
     }

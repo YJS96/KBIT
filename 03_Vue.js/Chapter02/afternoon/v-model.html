@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <h1>양방향 데이터 바인딩 확인하기</h1> -->
+      <!-- <h1 v-show="amount < 1000">천원 이상부터 입금 가능</h1>
+      <h1 v-show="amount >= 1000">입금이 가능합니다</h1> -->
+      <!-- 입금액 입력 : <input type="text" v-model.number="amount" /><br /> -->
+      <h1>오늘 행운의 정도는 {{ luck }}</h1>
+      <h1 v-if="luck > 8">오늘은 행운의 날 로또 사자</h1>
+      <h1 v-else-if="luck > 5">오늘은 운이 좋으시군요</h1>
+      <h1 v-else-if="luck > 3">평균적인 날입니다</h1>
+      <h1 v-else="luck">아...........</h1>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            luck: parseInt(Math.random() * 10),
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
