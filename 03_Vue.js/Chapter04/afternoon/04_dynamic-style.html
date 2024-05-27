@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 :class="styleObj">배경은 ???</h1>
+      <h1 :class="isOrange ? 'bg-orange' : 'bg-skyblue'">배경은 ???</h1>
+      <input type="checkbox" v-model="isOrange" name="" id="" />
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .bg-orange {
+        background-color: orange;
+      }
+
+      .bg-skyblue {
+        background-color: skyblue;
+      }
+    </style>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            isOrange: false,
+          };
+        },
+        computed: {
+          styleObj() {
+            return this.isOrange ? 'bg-orange' : 'bg-skyblue';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

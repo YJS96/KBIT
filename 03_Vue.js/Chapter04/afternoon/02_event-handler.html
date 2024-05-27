@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ msg }}</h1>
+      <input type="text" v-model.number="inputNum" />
+      <button @click="checkNum()">확인</button>
+      <div>{{ checkMsg }}</div>
+      <!-- <div>{{ random }}</div> -->
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            random: parseInt(Math.random() * 20),
+            inputNum: 0,
+            msg: '랜덤으로 생성 된 숫자를 맞춰보세요',
+            checkMsg: '',
+          };
+        },
+        methods: {
+          checkNum() {
+            // if (this.random > this.inputNum) {
+            //   this.checkMsg = 'Up';
+            // } else if (this.random < this.inputNum) {
+            //   this.checkMsg = 'Down';
+            // } else {
+            //   this.checkMsg = '정답입니다';
+            // }
+
+            if (this.random > this.inputNum) return (this.checkMsg = 'UP');
+            if (this.random < this.inputNum) return (this.checkMsg = 'DOWN');
+            return (this.checkMsg = '정답입니다');
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

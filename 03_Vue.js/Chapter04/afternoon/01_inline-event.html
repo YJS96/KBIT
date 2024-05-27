@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>count : {{ count }}</h1>
+      <button @click="count++">+</button>
+      <button @click="count--">-</button>
+      <button @click="count *= 2">*</button>
+      <button @click="count %= 5">%</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            count: 0,
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
