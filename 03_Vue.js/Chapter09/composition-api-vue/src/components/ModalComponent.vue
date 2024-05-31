@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-overlay" v-if="visible" @click="sendClose">
+  <div class="modal-overlay" v-if="visible">
     <div class="modal">
       <button class="close-button" @click="sendClose">X</button>
       <div class="modal-content">
