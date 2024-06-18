@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>dd</h1>
+    <input type="text" class="todo-input" maxlength="20" />
+    <button class="todo-btn">할 일 추가</button>
+    <ul class="todo-list"></ul>
+    <script>
+      const todoInput = document.querySelector('.todo-input');
+      const addBtn = document.querySelector('.todo-btn');
+      const todoList = document.querySelector('.todo-list');
+
+      addBtn.addEventListener('click', () => {
+        if (todoInput.value === '') {
+          todoInput.setAttribute('placeholder', '내용을 입력 해주세요');
+        } else {
+          const newTodoContainer = document.createElement('li');
+
+          const newCheckBtn = document.createElement('input');
+          newCheckBtn.setAttribute('type', 'checkbox');
+
+          newCheckBtn.addEventListener('click', () => {
+            if (newCheckBtn.checked === true) {
+              newCheckBtn.parentNode.style.textDecoration = 'line-through';
+            } else {
+              newCheckBtn.parentNode.style.textDecoration = 'none';
+            }
+          });
+
+          const newDeleteBtn = document.createElement('input');
+          newDeleteBtn.setAttribute('type', 'button');
+          newDeleteBtn.setAttribute('value', '삭제');
+
+          newDeleteBtn.setAttribute('onclick', 'deleteTask(this);');
+
+          newTodoContainer.append(newCheckBtn);
+          newTodoContainer.append(todoInput.value);
+          newTodoContainer.append(newDeleteBtn);
+
+          todoList.appendChild(newTodoContainer);
+          todoInput.value = '';
+        }
+      });
+
+      const deleteTask = (target) => {
+        target.parentNode.remove();
+      };
+    </script>
+  </body>
+</html>
