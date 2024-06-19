@@ -23,7 +23,7 @@ public class Scanner6Ex {
                 System.out.println("Up");
             }
 
-             // System.out.println(randNum);
+            // System.out.println(randNum);
         }
     }
 }
