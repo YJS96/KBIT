@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @Slf4j
-public class MemberFormControllerV1 {
-    @GetMapping("/member/form")
+public class TodoFormControllerV2 {
+    @GetMapping("/todo/v2/form")
     public String process(HttpServletRequest request, HttpServletResponse response) {
-        log.info("========> 회원 추가 페이지 호출, /member/register");
+        log.info("========> 할 일 추가 페이지 호출, /todo/form");
 
-        return "member-form1";
+        return "todo-form2";
     }
 }

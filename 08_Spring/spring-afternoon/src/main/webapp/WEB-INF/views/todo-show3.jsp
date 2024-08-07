@@ -6,11 +6,10 @@
 </head>
 <body>
     <%@ include file="header.jsp"%>
-    <h1>회원 목록 1</h1>
     <ul>
-        <li><b>ID - NAME</b></li>
-        <c:forEach var="member" items="${memberList}">
-            <li>${member.id} - ${member.name}</li>
+        <li><b>할 일 리스트 3</b></li>
+        <c:forEach var="todo" items="${todoList}">
+            <li>${todo.todo}</li>
         </c:forEach>
     </ul>
 </body>
