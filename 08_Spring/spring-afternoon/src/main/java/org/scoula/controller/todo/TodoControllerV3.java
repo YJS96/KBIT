@@ -1,8 +1,8 @@
-package org.scoula.controller;
+package org.scoula.controller.todo;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.scoula.dto.TodoDtoListV2;
+import org.scoula.dto.todo.TodoDtoListV2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

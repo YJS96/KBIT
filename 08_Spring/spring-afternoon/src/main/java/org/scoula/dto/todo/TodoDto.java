@@ -1,4 +1,4 @@
-package org.scoula.dto;
+package org.scoula.dto.todo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

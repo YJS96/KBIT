@@ -1,10 +1,9 @@
-package org.scoula.controller;
+package org.scoula.controller.todo.v1;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.scoula.dto.TodoDtoListV1;
+import org.scoula.dto.todo.TodoDtoListV1;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpServletRequest;

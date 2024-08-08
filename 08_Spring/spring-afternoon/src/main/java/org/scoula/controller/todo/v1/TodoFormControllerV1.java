@@ -1,4 +1,4 @@
-package org.scoula.controller;
+package org.scoula.controller.todo.v1;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
