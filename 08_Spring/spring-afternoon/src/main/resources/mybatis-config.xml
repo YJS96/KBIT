@@ -5,6 +5,6 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="MemberDto" type="org.scoula.dto.member.MemberDto" />
-
+        <typeAlias alias="PostDto" type="org.scoula.dto.post.PostDto" />
     </typeAliases>
 </configuration>
