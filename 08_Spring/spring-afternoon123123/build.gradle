@@ -78,9 +78,8 @@ dependencies {
     implementation 'org.hibernate:hibernate-core:5.5.6.Final'
     implementation 'mysql:mysql-connector-java:8.0.33'
 
-    // 암호화
-    implementation 'org.springframework.security:spring-security-crypto'
-    implementation 'org.springframework.security:spring-security-core:5.8.0'
+
+
 }
 
 test {
