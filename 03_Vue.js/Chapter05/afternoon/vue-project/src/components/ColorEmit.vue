@@ -2,6 +2,7 @@
   <div>
     <input type="text" v-model.trim="color" />
     <button @click="$emit('colorChanged', { color })">색상 전달</button>
+    <div></div>
   </div>
 </template>
 
